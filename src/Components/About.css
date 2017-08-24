@@ -33,3 +33,8 @@
     border-radius: 0 0 6px 6px;
     color: #A4AEA5;
 }
+
+h3:hover{
+    cursor:default;
+    color: #AA6D78;
+}

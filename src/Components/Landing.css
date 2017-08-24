@@ -31,3 +31,9 @@
     font-size: 30px;
     margin: 40px;
 }
+
+.Nav h3:hover{
+    cursor:default;
+    color: #AA6D78;
+    font-size: 32px;
+}
