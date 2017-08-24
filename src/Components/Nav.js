@@ -8,7 +8,7 @@ export default class Nav extends Component{
                 <h3>About</h3>
                 <h3>Projects</h3>
                 <h3>Contact</h3>
-                <h3>Moore</h3>
+                <h3>More</h3>
             </div>
         );
     }

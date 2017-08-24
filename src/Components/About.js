@@ -3,13 +3,73 @@ import './About.css';
 
 
 export default class About extends Component{
+    constructor(){
+        super();
+
+        this.state={webDev:true, workHistory: false, personal:false}
+
+        this.changeTab = this.changeTab.bind(this);
+    }
+
+    changeTab(tab){        
+        switch(tab){
+            case "webDev":        
+                this.setState({webDev:true, workHistory:false,personal:false});
+                break;
+            case "workHistory":
+                this.setState({webDev:false, workHistory:true,personal:false});
+                break;
+            case "personal":
+                this.setState({webDev:false, workHistory:false,personal:true});
+        }
+    }
+
     render(){
+        console.log(this.state)
         return(
             <div className="About">
-                <div className="tabs">
-                    <h2>Web Development</h2>
-                    <h2>Work History</h2>
-                    <h2>Personal</h2>
+                <div className="About-inner">
+                    <div className="tabs">
+
+                        <div onClick={()=>this.changeTab("webDev")}
+                            className="h2Wrapper" style={this.state.webDev?{backgroundColor:'white',color: "#AA6D78"}:null}>
+                            <h3>Web Development</h3>
+                        </div>
+                        <div onClick={()=>this.changeTab("workHistory")}
+                            className="h2Wrapper" style={this.state.workHistory?{backgroundColor:'white',color: "#AA6D78"}:null}>
+                            <h3>Work History</h3>
+                        </div>
+                        <div onClick={()=>this.changeTab("personal")}
+                            className="h2Wrapper" style={this.state.personal?{backgroundColor:'white',color: "#AA6D78"}:null}>
+                            <h3>Personal</h3>
+                        </div>
+                    </div>
+                    {this.state.webDev?
+                        <div className="content">
+                            <p>In 2015 I've started learning the basics of Python and immensely enjoyed 
+                            the challenge and feeling of achievement that came with every solved problem.
+                            In 2016 I switched to learning HTML, CSS and Javascript, which allowed me to 
+                            progress faster and see immediate results. Doing this for one year in my spare 
+                            time solidified the wish to code fulltime. I attended a 3-month immersive coding
+                            program to speed-up my learning process extend my knowledge to back-end development
+                            utilizing Node.js and PostgreSQL, as well as learning the React and Redux.    </p>
+                        </div>:null}
+                    {this.state.workHistory?
+                        <div className="content">
+                            <p>I worked for nearly 10 years in 
+                            the production industry in planning and 
+                            disposition and for the last 6 years I have 
+                            been working in the legal industry.
+                            Whilst I enjoyed both occupations, I felt I needed
+                            a new challenge and programming certainly qualifies as that.</p>
+                        </div>:null}
+                    {this.state.personal?
+                        <div className="content">
+                            <p>As an avid traveller I feel nowhere and everywhere at home! 
+                            I love to discover new things, travel to new places and meet new people 
+                            but I just as much like to hide away and solve a problem, learn some  
+                            more code and fix a bug. In my free time, I am drawn to nature, hiking and camping.</p>
+                        </div>:null}
                 </div>
             </div>
         );
