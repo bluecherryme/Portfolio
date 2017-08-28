@@ -26,7 +26,7 @@ export default class About extends Component{
 
     render(){
         return(
-            <div className="About">
+            <div className="container">
                 <div className="About-inner">
                     <div className="tabs">
                         <div onClick={()=>this.changeTab("webDev")}
