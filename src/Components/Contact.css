@@ -1,0 +1,30 @@
+.contact{
+    height: 350px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.content h2{
+    color: #AA6D78;
+    margin-bottom: 20px;
+}
+
+#email, #phone{
+    height: 45px;
+    border: 1px solid #AA6D78;
+    font-size: 20px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#email{
+    margin-top: 30px;
+}
+
+#phone, #email:hover a, #email:hover{
+    background-color: #AA6D78;
+    color: white;
+}
+

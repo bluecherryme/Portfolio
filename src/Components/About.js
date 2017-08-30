@@ -27,7 +27,7 @@ export default class About extends Component{
     render(){
         return(
             <div className="container">
-                <div className="About-inner">
+                <div className="ctn-inner">
                     <div className="tabs">
                         <div onClick={()=>this.changeTab("webDev")}
                             className="h2Wrapper" style={this.state.webDev?{backgroundColor:'white',color: "#AA6D78"}:null}>
