@@ -30,10 +30,12 @@
     border-bottom: 2px solid white;
     font-size: 30px;
     margin: 40px;
+    transition: width 0.5s;
 }
 
 .Nav h3:hover{
     cursor:default;
     color: #AA6D78;
     font-size: 32px;
+    width: 400px;
 }

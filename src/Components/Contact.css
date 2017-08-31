@@ -19,10 +19,6 @@
     align-items: center;
 }
 
-#email{
-    margin-top: 30px;
-}
-
 #phone, #email:hover a, #email:hover{
     background-color: #AA6D78;
     color: white;

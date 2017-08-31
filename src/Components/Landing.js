@@ -40,10 +40,14 @@ export default class Landing extends Component{
                     <h2>- Full Stack Web Developer -</h2>
                 </div>
                 <div className="Nav">
-                    <h3 onClick={()=>this.changeMenu('about')}>About</h3>
-                    <h3 onClick={()=>this.changeMenu('projects')}>Projects</h3>
-                    <h3 onClick={()=>this.changeMenu('skills')}>Skills</h3>
-                    <h3 onClick={()=>this.changeMenu('contact')}>Contact</h3>
+                    <h3 style={this.state.about?{color:"#AA6D78", width:"400px", borderBottom:"2px solid #AA6D78"}:null} 
+                        onClick={()=>this.changeMenu('about')}>About</h3>
+                    <h3 style={this.state.projects?{color:"#AA6D78", width:"400px", borderBottom:"2px solid #AA6D78"}:null} 
+                        onClick={()=>this.changeMenu('projects')}>Projects</h3>
+                    <h3 style={this.state.skills?{color:"#AA6D78", width:"400px", borderBottom:"2px solid #AA6D78"}:null} 
+                        onClick={()=>this.changeMenu('skills')}>Skills</h3>
+                    <h3 style={this.state.contact?{color:"#AA6D78", width:"400px", borderBottom:"2px solid #AA6D78"}:null} 
+                        onClick={()=>this.changeMenu('contact')}>Contact</h3>
                 </div>
                 {this.state.about?<About/>:null}
                 {this.state.projects?<Projects/>:null}
