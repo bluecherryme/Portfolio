@@ -3,15 +3,22 @@ import About from './About';
 import Projects from './Projects';
 import Skills from './Skills';
 import Contact from './Contact';
+import RecipeApp from './RecipeApp';
 import './Landing.css';
 
 
 export default class Landing extends Component{
     constructor(){
         super();
-        this.state={about:true, projects:false, skills: false, contact: false}
+        this.state={about:true, projects:false, skills: false, contact: false,
+                    showRecipeApp:true}
         
         this.changeMenu = this.changeMenu.bind(this);
+        this.toggleShowRecipeApp = this.toggleShowRecipeApp.bind(this);
+    }
+
+    toggleShowRecipeApp(){
+        this.setState({showRecipeApp:!this.state.showRecipeApp});
     }
 
     changeMenu(menuItem){
@@ -32,7 +39,7 @@ export default class Landing extends Component{
     }
 
     render(){
-        console.log(this.state)
+        console.log(this.state.showRecipeApp)
         return(
             <div id="Landing">
                 <div id="heading">
@@ -50,10 +57,11 @@ export default class Landing extends Component{
                         onClick={()=>this.changeMenu('contact')}>Contact</h3>
                 </div>
                 {this.state.about?<About/>:null}
-                {this.state.projects?<Projects/>:null}
+                {this.state.projects?<Projects showRecipeApp={this.toggleShowRecipeApp}/>:null}
                 {this.state.skills?<Skills/>:null}
                 {this.state.contact?<Contact/>:null}
-                </div>
+                {this.state.showRecipeApp?<RecipeApp showRecipeApp={this.toggleShowRecipeApp}/>:null}
+            </div>
         )
     }
 }

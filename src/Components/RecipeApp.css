@@ -1,0 +1,33 @@
+.modal-outer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255,255,255,0.7);
+
+}
+
+.modal-inner{
+    background-color: white;
+    width: 80%;
+    height: 80%;
+    position: fixed;
+    left: 10%;
+    top: 13%;
+    overflow-y: auto;
+    color: #A4AEA5;
+}
+
+#close{
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    transition: all 1s ease-in-out;
+}
+
+#close:hover{
+    height: 64px;
+    width: 64px;
+    transform: rotate(90deg);
+}
