@@ -3,11 +3,12 @@
     background-position: 10% 10%;
     background-size: cover;
     width: 100vw;
-    height: 100vh;
     background-color: #EACDCF;
     color: white;
     position: fixed;
     top: 0;
+    padding-bottom: 50px;
+    height: 2000px;
 }
 
 #heading{
@@ -39,6 +40,15 @@
     cursor:default;
     color: #AA6D78;
     font-size: 32px;
+}
+
+
+@media(min-width: 520px){
+    #Landing{
+        height: 100vh;
+        padding-bottom: 0;
+    }
+    
 }
 
 @media(min-width: 800px){

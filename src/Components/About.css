@@ -1,6 +1,5 @@
 .container{
-    width: 500px;
-    height: 400px;
+    width: 94vw;
     border: 2px solid white;
     border-radius: 6px;
     margin: auto;
@@ -10,13 +9,12 @@
 
 .ctn-inner{
     margin: 5px;
-    height: 388px;
 }
 
 .tabs{
     display: flex;
     justify-content: space-around;
-    height: 60px;
+    height: 80px;
 }
 
 .h2Wrapper{
@@ -29,7 +27,6 @@
 .content{
     padding: 20px;
     background-color: white;
-    height: 288px;
     border-radius: 0 0 6px 6px;
     color: #A4AEA5;
 }
@@ -37,4 +34,20 @@
 h3:hover{
     cursor:default;
     color: #AA6D78;
+}
+
+@media(min-width:520px){
+    .container{
+        width: 500px;
+        height: 400px;
+    }
+    .ctn-inner{
+        height: 388px;
+    }
+    .content{
+        height: 288px;
+    }
+    .tabs{
+        height: 60px;
+    }
 }
