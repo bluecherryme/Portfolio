@@ -1,34 +1,25 @@
 import React, {Component} from 'react';
 import './RecipeApp.css';
 
-export default class RecipeApp extends Component{
+export default class Boardroom extends Component{
     render(){
         return(
             <div className="modal-outer">
                 <div className="modal-inner">
-                    <img onClick={()=>this.props.showRecipeApp()}
+                    <img onClick={()=>this.props.showBoardroom()}
                      id="close" src={require('./../Assets/close.svg')} alt="close"/>
 
                     <div className="sub-header">
-                        <h1>Let’s Cook — Recipe site - Personal Project</h1>
-                        <h2>A full stack personal project allowing users to search for recipes, save them and generate a shopping list</h2>
-                        <span>Check out the live project<a href="http://bluecherry.online" target="_blank">here</a></span>
-                        <span>or have a look at the code on GitHub<a href="https://github.com/bluecherryme/RecipeApp" target="_blank">here</a></span>
+                        <h1>Boardroom — Slack with whiteboards using sockets - Group Project</h1>
+                        <h2>A whiteboarding environment allowing remote teams to collaborate simultaneously</h2>
+                        <span>Check out the live project<a href="http://theboardroom.herokuapp.com" target="_blank">here</a></span>
+                        <span>or have a look at the code on GitHub<a href="https://github.com/TheBestProject/whiteboard" target="_blank">here</a></span>
                         
                         <div className="overview">
                             <ul>
-                                <li><b>Technologies used: HTML| CSS | JavaScript | React | Redux | Node.js Express | PostgreSQL</b></li>
+                                <li><b>Technologies used: HTML| CSS | JavaScript | React | Redux | Node.js Express | PostgreSQL | sockets.io | canvas</b></li>
                                 <li>Authentication using Auth0</li>
-                                <li>Fully responsive custom CSS design</li>
-                                <li>Used 4 different endpoints of the Spoonacular Recipe API and the Youtube API</li>
-                                <li>5 Reducers to manipulate data</li>
-                                <li>Used PostgreSQL DB to save user information, recipes, and ingredients</li>
-                                <li>End to end development from design (Adobe Experience Design) to hosting</li>
-                            </ul>
-                            
-                            
-                            
-                            
+                            </ul>                  
                         </div>
                     </div>
                               

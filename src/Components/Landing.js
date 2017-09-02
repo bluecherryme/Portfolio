@@ -4,6 +4,7 @@ import Projects from './Projects';
 import Skills from './Skills';
 import Contact from './Contact';
 import RecipeApp from './RecipeApp';
+import Boardroom from './Boardroom';
 import './Landing.css';
 
 
@@ -11,14 +12,19 @@ export default class Landing extends Component{
     constructor(){
         super();
         this.state={about:true, projects:false, skills: false, contact: false,
-                    showRecipeApp:true}
+                    showRecipeApp:false, showBoardroom: true}
         
         this.changeMenu = this.changeMenu.bind(this);
         this.toggleShowRecipeApp = this.toggleShowRecipeApp.bind(this);
+        this.toggleShowBoardroom = this.toggleShowBoardroom.bind(this);
     }
 
     toggleShowRecipeApp(){
         this.setState({showRecipeApp:!this.state.showRecipeApp});
+    }
+
+    toggleShowBoardroom(){
+        this.setState({showBoardroom:!this.state.showBoardroom});
     }
 
     changeMenu(menuItem){
@@ -57,10 +63,11 @@ export default class Landing extends Component{
                         onClick={()=>this.changeMenu('contact')}>Contact</h3>
                 </div>
                 {this.state.about?<About/>:null}
-                {this.state.projects?<Projects showRecipeApp={this.toggleShowRecipeApp}/>:null}
+                {this.state.projects?<Projects showRecipeApp={this.toggleShowRecipeApp} showBoardroom={this.toggleShowBoardroom}/>:null}
                 {this.state.skills?<Skills/>:null}
                 {this.state.contact?<Contact/>:null}
                 {this.state.showRecipeApp?<RecipeApp showRecipeApp={this.toggleShowRecipeApp}/>:null}
+                {this.state.showBoardroom?<Boardroom showBoardroom={this.toggleShowBoardroom}/>:null}
             </div>
         )
     }

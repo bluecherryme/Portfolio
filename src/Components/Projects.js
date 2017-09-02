@@ -12,7 +12,7 @@ export default class Projects extends Component{
                         <h1>Projects</h1>
                         <projects>
                             <h2 onClick={()=>this.props.showRecipeApp()}>Recipe App</h2>
-                            <h2>The Boardroom</h2>
+                            <h2 onClick={()=>this.props.showBoardroom()}>The Boardroom</h2>
                             <h2 id="last">More coming soon</h2>
                         </projects>
                     </div>
