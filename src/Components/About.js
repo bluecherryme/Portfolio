@@ -48,8 +48,8 @@ export default class About extends Component{
                             the challenge and feeling of achievement that came with every solved problem.
                             In 2016, I switched to learning <b>HTML, CSS and Javascript,</b> which allowed me to 
                             progress faster and see immediate results. Doing this, for one year, in my spare 
-                            time solidified the wish to code fulltime. I attended a 3-month immersive coding
-                            program to speed-up my learning process. I extended my knowledge to include back-end development,
+                            time solidified the wish to code fulltime. In May 2017, I attended a 3-month immersive coding
+                            program to speed-up my learning process. There extended my knowledge to include back-end development,
                             utilizing <b>Node.js</b> and <b>PostgreSQL</b>, as well as <b>React</b> and<b> Redux</b>.    </p>
                         </div>:null}
                     {this.state.workHistory?

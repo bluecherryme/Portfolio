@@ -1,14 +1,10 @@
 #Landing{
-    background-image: url('./../Assets/pinkKeyboard.jpeg');
-    background-position: 10% 10%;
-    background-size: cover;
-    width: 100vw;
     background-color: #EACDCF;
     color: white;
-    position: fixed;
-    top: 0;
     padding-bottom: 50px;
-    height: 2000px;
+    position: absolute;
+    top: 0;
+    width: 100vw;    
 }
 
 #heading{
@@ -17,9 +13,11 @@
 }
 
 #heading h1{
-    font-size: 50px;
+    font-size: 30px;
 }
-
+#heading h2{
+    font-size: 18px;
+}
 .Nav{
     position: fixed;
     left: 0;
@@ -27,7 +25,6 @@
     z-index: 3;
     background: #EACDCF;
 }
-
 .Nav h3{
     width: 200px;
     border-bottom: 2px solid white;
@@ -35,20 +32,27 @@
     margin: 40px;
     transition: width 0.5s;
 }
-
 .Nav h3:hover{
     cursor:default;
     color: #AA6D78;
     font-size: 32px;
 }
-
-
 @media(min-width: 520px){
     #Landing{
+        background-image: url('./../Assets/pinkKeyboard.jpeg');
+        background-position: 10% 10%;
+        background-size: cover;
         height: 100vh;
-        padding-bottom: 0;
+        position: fixed;
+        top: 0;
+        padding-bottom: 50px;
     }
-    
+    #heading h1{
+        font-size: 50px;
+    }
+    #heading h2{
+        font-size: 24px;
+    }    
 }
 
 @media(min-width: 800px){
