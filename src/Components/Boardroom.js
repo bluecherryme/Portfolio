@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import './RecipeApp.css';
 
 export default class Boardroom extends Component{
     render(){
@@ -7,142 +6,70 @@ export default class Boardroom extends Component{
             <div className="modal-outer">
                 <div className="modal-inner">
                     <img onClick={()=>this.props.showBoardroom()}
-                     id="close" src={require('./../Assets/close.svg')} alt="close"/>
+                    id="close" src={require('./../Assets/close.svg')} alt="close"/>
 
                     <div className="sub-header">
                         <h1>Boardroom — Slack with whiteboards using sockets - Group Project</h1>
                         <h2>A whiteboarding environment allowing remote teams to collaborate simultaneously</h2>
-                        <span>Check out the live project<a href="http://theboardroom.herokuapp.com" target="_blank">here</a></span>
-                        <span>or have a look at the code on GitHub<a href="https://github.com/TheBestProject/whiteboard" target="_blank">here</a></span>
+                        <span>Check out the live project<a href="http://theboardroom.herokuapp.com" target="_blank" rel="noopener noreferrer">here</a></span>
+                        <span>or have a look at the code on GitHub<a href="https://github.com/TheBestProject/whiteboard" target="_blank" rel="noopener noreferrer">here</a></span>
                         
                         <div className="overview">
                             <ul>
                                 <li><b>Technologies used: HTML| CSS | JavaScript | React | Redux | Node.js Express | PostgreSQL | sockets.io | canvas</b></li>
-                                <li>Authentication using Auth0</li>
                             </ul>                  
                         </div>
                     </div>
-                              
+                            
                     <div className="partition">
                         <div className="screenPrint">
-                            <img src={require('./../Assets/landing_page.png')} alt="landing-page"/>
+                            <img src={require('./../Assets/board_landing.png')} alt="landing-page"/>
                         </div>
                         <div className="description">
                             <h4>Landing Page</h4>
                             <ul>
-                                <li>Navbar using React Router Links to navigate to the different views.</li>
-                                <li>The Login button is replaced by the MyAccount Tab and the Logout button once a user has logged in.</li>
+                                <li>A user can make or join a group.</li>
+                                <li>Within a group various projects can be made.</li>
                             </ul>
                         </div>
                     </div>
 
                     <div className="partition">
-                    <div className="screenPrint">
-                        <img src={require('./../Assets/Search.png')} alt="search-page"/>
+                        <div className="screenPrint">
+                            <img src={require('./../Assets/board_cards.png')} alt="landing-page"/>
+                        </div>
+                        <div className="description">
+                            <h4>Grid View</h4>
+                            <ul>
+                                <li>Within Projects whiteboards that have previously been saved can be accessed or new whiteboards added</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div className="description">
-                        <h4>Search</h4>
-                        <ul>
-                            <li>The user has two options to search:
-                                <ol>
-                                    <li>By ingredients</li>
-                                    <li>By recipe name</li>
-                                </ol>
-                            </li>
-                            <li>Commas and spaces are filtered out of the search input and all 
-                            letters are converted to lowercase so that the final URL can be build and axios 
-                            calls made to two different endpoints of the Spoonacular Recipe API.</li>
-                            <li>The placeholder in the search input field changes depending on the search option chosen.</li> 
-                        </ul>
-                    </div>
-                </div>
 
-                <div className="partition">
-                    <div className="screenPrint">
-                        <img src={require('./../Assets/cards.png')} alt="landing-page"/>
+                    <div className="partition">
+                        <div className="screenPrint">
+                            <img src={require('./../Assets/board.png')} alt="landing-page"/>
+                        </div>
+                        <div className="description">
+                            <h4>Whiteboard</h4>
+                            <p>This view has been my main focus within the group project.</p>
+                            <p>Initially I had to figure out how canvas works and how to manipulate 
+                                it with Javascript. We ended up using parts of a npm library for the main 
+                                functions, i.e. drawing a line, a square and an ellipse. 
+                                I then had to integrate the canvas functions within React, 
+                                which represented a challenge since React is using a virtual DOM 
+                                and we were not consistently able to access the canvas object. </p>
+                            <p>Each object drawn on the canvas is added to Redux state. 
+                                I wrote reducer functions to implement the undo, redo and clear 
+                                buttons. </p>
+                            <p>The same whiteboard can be used by multiple users on 
+                                different locations using sockets.
+                            </p>
+                            <p>Drawings are submitted in real time. The undo and redo functions 
+                                do also work across boards.</p>
+                        </div>
                     </div>
-                    <div className="description">
-                        <h4>Search Results</h4>
-                        <ul>
-                            <li>Search Results are shown in the form of cards - initially 6 recipes are shown.</li>
-                            <li>On hover the recipe name and some additional information is shown.</li>
-                            <li>The user can click a “See More” button to load more recipes. This button triggers 
-                                two different functions depending on whether the user is searching by ingredients or by name. 
-                                The endpoint that provides recipes by name allows for an offset, 
-                                which means recipes can be dynamically requested once the user clicks the button. 
-                                The endpoint which provides recipes by ingredients, does not allow for an offset and 
-                                recipes have to be stored on state, to be displayed once the user clicks the 'See More' button.
-                            </li>
-                            <li>The user has the opportunity to click a button to be brought up to the search section to search again.</li>
-                            <li>The user can click a button to view a random recipe.</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div className="partition">
-                    <div className="screenPrint">
-                        <img src={require('./../Assets/recipe_view.png')} alt="landing-page"/>
-                    </div>
-                    <div className="description">
-                        <h4>Recipe Detail</h4>
-                        <ul>
-                            <li>Once the user clicks a recipe card, an axios call is made to another endpoint of the recipe API.</li>
-                            <li>The information returned is stored on redux state and displayed in the detailed recipe view.</li>
-                            <li>The user can save a recipe to his/her account.</li>
-                            <li>If the user is not yet logged in, he is asked to login first.</li>
-                            <li>The user can save the ingredients to a shopping list in his/her account.</li>
-                            <li>Both saving actions change the state on the front end and, also, send data to the back 
-                                end via PUT endpoints on a node server to a online Heroku PostgreSQL database. </li>
-                            <li>Once the user clicks the save button a pop-up window appears confirming that saving 
-                                has been successful - a timeout function makes the pop-up disappear.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div className="partition">
-                    <div className="screenPrint">
-                        <img src={require('./../Assets/recipe_video_search.png')} alt="landing-page"/>
-                    </div>
-                    <div className="description">
-                        <h4>Video Search</h4>
-                        <ul>
-                            <li>A user can search for recipe videos on YouTube via the YouTube API.</li>
-                            <li>5 videos are returned and can be accessed via the “Next” button</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div className="partition">
-                    <div className="screenPrint">
-                        <img src={require('./../Assets/saved_recipes.png')} alt="landing-page"/>
-                    </div>
-                    <div className="description">
-                        <h4>MyAccount</h4>
-                        <ul>
-                            <li>A user can access his/her account and view the recipes that he has previously received.</li>
-                            <li>Once the user clicks on MyAccount, a GET request is send to the server which fetches all 
-                                recipes that have been saved by that particular user in the database</li> 
-                        </ul>
-                    </div>
-                </div>
-
-                <div className="partition">
-                    <div className="screenPrint">
-                        <img src={require('./../Assets/shopping_list.png')} alt="landing-page"/>
-                    </div>
-                    <div className="description">
-                        <h4>Shopping List</h4>
-                        <ul>
-                            <li>A user can save ingredients from a recipe to his/her shopping list.</li>
-                            <li>Salt, pepper and sugar are filtered out prior to adding the ingredients 
-                                to the list under the presumption that those ingredients are usually available.</li>
-                            <li>Items can be manually added and deleted.</li>
-                            <li>The whole list can be cleared and saved upon which a PUT request submits the entire list to the database.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                </div>
+                </div>  
             </div>
         );
     }
