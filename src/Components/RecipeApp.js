@@ -12,8 +12,8 @@ export default class RecipeApp extends Component{
                     <div className="sub-header">
                         <h1>Let’s Cook — Recipe site - Personal Project</h1>
                         <h2>A full stack personal project allowing users to search for recipes, save them and generate a shopping list</h2>
-                        <span>Check out the live project<a href="http://bluecherry.online" target="_blank">here</a></span>
-                        <span>or have a look at the code on GitHub<a href="https://github.com/bluecherryme/RecipeApp" target="_blank">here</a></span>
+                        <span>Check out the live project<a href="http://bluecherry.online" target="_blank" rel="noopener noreferrer">here</a></span>
+                        <span>or have a look at the code on GitHub<a href="https://github.com/bluecherryme/RecipeApp" target="_blank" rel="noopener noreferrer">here</a></span>
                         
                         <div className="overview">
                             <ul>

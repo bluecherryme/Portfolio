@@ -23,6 +23,8 @@
     position: fixed;
     left: 0;
     height: 100%;
+    z-index: 3;
+    background: #EACDCF;
 }
 
 .Nav h3{
@@ -37,5 +39,17 @@
     cursor:default;
     color: #AA6D78;
     font-size: 32px;
-    width: 400px;
+}
+
+@media(min-width: 800px){
+    .Nav{
+        z-index: -1;
+        background: none;
+    }
+}
+
+@media(min-width: 1470px){
+    .Nav h3:hover{
+        width: 400px;
+    }    
 }
