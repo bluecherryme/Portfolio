@@ -5,7 +5,7 @@
 
 projects h2{
     border: 2px solid #AA6D78;
-    width: 400px;
+    width: 100%;
     height: 50px;
     display: flex;
     align-items: center;
@@ -18,3 +18,8 @@ projects h2:hover, #last{
     color: white;
 }
 
+@media(min-width: 520px){
+    projects h2{
+        width: 400px;
+    }
+}

@@ -16,19 +16,15 @@ export default class RecipeApp extends Component{
                         <span>or have a look at the code on GitHub<a href="https://github.com/bluecherryme/RecipeApp" target="_blank" rel="noopener noreferrer">here</a></span>
                         
                         <div className="overview">
-                            <ul>
+                            <ul id="tech">
                                 <li><b>Technologies used: HTML| CSS | JavaScript | React | Redux | Node.js Express | PostgreSQL</b></li>
                                 <li>Authentication using Auth0</li>
                                 <li>Fully responsive custom CSS design</li>
                                 <li>Used 4 different endpoints of the Spoonacular Recipe API and the Youtube API</li>
                                 <li>5 Reducers to manipulate data</li>
-                                <li>Used PostgreSQL DB to save user information, recipes, and ingredients</li>
+                                <li>Used PostgreSQL DB to store user information, recipes, and ingredients</li>
                                 <li>End to end development from design (Adobe Experience Design) to hosting</li>
-                            </ul>
-                            
-                            
-                            
-                            
+                            </ul>               
                         </div>
                     </div>
                               
