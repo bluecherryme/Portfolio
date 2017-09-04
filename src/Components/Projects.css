@@ -1,6 +1,6 @@
 .content h1{
     color: #AA6D78;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 projects h2{
@@ -22,4 +22,11 @@ projects h2:hover, #last{
     projects h2{
         width: 400px;
     }
+}
+
+@media(min-width:1470px){
+    .content h1{
+        margin-bottom: 50px;
+    }
+
 }

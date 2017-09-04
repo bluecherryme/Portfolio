@@ -17,7 +17,7 @@ export default class RecipeApp extends Component{
                         
                         <div className="overview">
                             <ul id="tech">
-                                <li><b>Technologies used: HTML| CSS | JavaScript | React | Redux | Node.js Express | PostgreSQL</b></li>
+                                <li><b>Technologies used: HTML| CSS | JavaScript | React | Redux | Node.js | PostgreSQL</b></li>
                                 <li>Authentication using Auth0</li>
                                 <li>Fully responsive custom CSS design</li>
                                 <li>Used 4 different endpoints of the Spoonacular Recipe API and the Youtube API</li>
@@ -55,7 +55,7 @@ export default class RecipeApp extends Component{
                                 </ol>
                             </li>
                             <li>Commas and spaces are filtered out of the search input and all 
-                            letters are converted to lowercase so that the final URL can be build and axios 
+                            letters are converted to lowercase so the final URL can be build and axios 
                             calls made to two different endpoints of the Spoonacular Recipe API.</li>
                             <li>The placeholder in the search input field changes depending on the search option chosen.</li> 
                         </ul>
@@ -124,9 +124,9 @@ export default class RecipeApp extends Component{
                     <div className="description">
                         <h4>MyAccount</h4>
                         <ul>
-                            <li>A user can access his/her account and view the recipes that he has previously received.</li>
-                            <li>Once the user clicks on MyAccount, a GET request is send to the server which fetches all 
-                                recipes that have been saved by that particular user in the database</li> 
+                            <li>A user can access their account and view recipes they have previously saved.</li>
+                            <li>Once the user clicks on MyAccount, a GET request is sent to the server which fetches all 
+                                recipes that have been saved by that particular user in the database.</li> 
                         </ul>
                     </div>
                 </div>
@@ -138,7 +138,7 @@ export default class RecipeApp extends Component{
                     <div className="description">
                         <h4>Shopping List</h4>
                         <ul>
-                            <li>A user can save ingredients from a recipe to his/her shopping list.</li>
+                            <li>A user can save ingredients from a recipe to their shopping list.</li>
                             <li>Salt, pepper and sugar are filtered out prior to adding the ingredients 
                                 to the list under the presumption that those ingredients are usually available.</li>
                             <li>Items can be manually added and deleted.</li>

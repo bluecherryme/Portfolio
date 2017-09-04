@@ -78,6 +78,9 @@
     width: 100%;
     height: auto;
 }
+.description p{
+    padding: 10px;
+}
 .description h4{
     margin-top: 10px;
     color: #999;

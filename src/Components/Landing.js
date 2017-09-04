@@ -59,7 +59,7 @@ export default class Landing extends Component{
     render(){
         console.log(this.state.showRecipeApp)
         return(
-            <div id="Landing">
+            <div id="Landing" style={this.state.showNav?{position:"fixed"}:null}>
                     {windowWidth<800?
                     <div className="burger" onClick={()=>this.toggleNav()}>
                         <ham></ham>

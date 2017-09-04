@@ -1,5 +1,5 @@
 .contact{
-    height: 350px;
+    height: 300px;
     border-radius: 6px;
     text-align: center;
 }
@@ -9,7 +9,7 @@
     margin-bottom: 20px;
 }
 
-#email, #phone{
+.email, #phone{
     height: 45px;
     border: 1px solid #AA6D78;
     font-size: 20px;
@@ -19,8 +19,24 @@
     align-items: center;
 }
 
-#phone, #email:hover a, #email:hover{
+#phone, .email:hover a, .email:hover{
     background-color: #AA6D78;
     color: white;
+}
+.contact p{
+    font-size: 18px;
+}
+
+@media(min-width:520px){
+    .contact p{
+        font-size: 20px;
+    }
+}
+
+@media(min-width:1470px){
+    .contact{
+        height: 350px;
+    }
+
 }
 

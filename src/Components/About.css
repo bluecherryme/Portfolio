@@ -25,7 +25,7 @@
 }
 
 .content{
-    padding: 20px;
+    padding: 10px 20px 30px 20px;
     background-color: white;
     border-radius: 0 0 6px 6px;
     color: #A4AEA5;
@@ -37,6 +37,22 @@ h3:hover{
 }
 
 @media(min-width:520px){
+    .container{
+        width: 600px;
+        height: 350px;
+    }
+    .ctn-inner{
+        height: 338px;
+    }
+    .content{
+        height: 238px;
+    }
+    .tabs{
+        height: 60px;
+    }
+}
+
+@media(min-width:1470px){
     .container{
         width: 500px;
         height: 400px;
@@ -50,4 +66,5 @@ h3:hover{
     .tabs{
         height: 60px;
     }
+
 }

@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 
 export default class Boardroom extends Component{
+    componentDidMount(){
+        window.scroll(0,0);
+    }
     render(){
         return(
             <div className="modal-outer">
@@ -16,7 +19,7 @@ export default class Boardroom extends Component{
                         
                         <div className="overview">
                             <ul>
-                                <li><b>Technologies used: HTML| CSS | JavaScript | React | Redux | Node.js Express | PostgreSQL | sockets.io | canvas</b></li>
+                                <li><b>Technologies used: HTML| CSS | JavaScript | React | Redux | Node.js | PostgreSQL | Sockets.io | Canvas</b></li>
                             </ul>                  
                         </div>
                     </div>
@@ -41,7 +44,7 @@ export default class Boardroom extends Component{
                         <div className="description">
                             <h4>Grid View</h4>
                             <ul>
-                                <li>Within Projects whiteboards that have previously been saved can be accessed or new whiteboards added</li>
+                                <li>Within Projects, previously saved whiteboards can be accessed and new whiteboards can be added</li>
                             </ul>
                         </div>
                     </div>
@@ -53,7 +56,7 @@ export default class Boardroom extends Component{
                         <div className="description">
                             <h4>Whiteboard</h4>
                             <p>This view has been my main focus within the group project.</p>
-                            <p>Initially I had to figure out how canvas works and how to manipulate 
+                            <p>Initially, I had to figure out how canvas works and how to manipulate 
                                 it with Javascript. We ended up using parts of a npm library for the main 
                                 functions, i.e. drawing a line, a square and an ellipse. 
                                 I then had to integrate the canvas functions within React, 
@@ -62,11 +65,9 @@ export default class Boardroom extends Component{
                             <p>Each object drawn on the canvas is added to Redux state. 
                                 I wrote reducer functions to implement the undo, redo and clear 
                                 buttons. </p>
-                            <p>The same whiteboard can be used by multiple users on 
-                                different locations using sockets.
+                            <p>Sockets allow multiple users to work on the same whiteboard no matter their location.
                             </p>
-                            <p>Drawings are submitted in real time. The undo and redo functions 
-                                do also work across boards.</p>
+                            <p>Drawings are submitted in real time and the undo and redo functions also work across boards.</p>
                         </div>
                     </div>
                 </div>  

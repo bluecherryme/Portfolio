@@ -44,13 +44,12 @@ export default class About extends Component{
                     </div>
                     {this.state.webDev?
                         <div className="content">
-                            <p>In 2015, I started learning the basics of Python and immensely enjoyed 
-                            the challenge and feeling of achievement that came with every solved problem.
+                            <p>In 2015, I started learning the basics of Python and immensely enjoyed it.
                             In 2016, I switched to learning <b>HTML, CSS and Javascript,</b> which allowed me to 
                             progress faster and see immediate results. Doing this, for one year, in my spare 
-                            time solidified the wish to code fulltime. In May 2017, I attended a 3-month immersive coding
-                            program to speed-up my learning process. There, I extended my knowledge to include back-end development,
-                            utilizing <b>Node.js</b> and <b>PostgreSQL</b>, as well as <b>React</b> and<b> Redux</b>.    </p>
+                            time solidified the wish to code fulltime.</p><p> In May 2017, I attended a 3-month immersive coding
+                            program to speed-up my learning process. There, I extended my knowledge to include <b>React</b> and<b> Redux</b>, as well as back-end development,
+                            utilizing <b>Node.js</b> and <b>PostgreSQL</b>.    </p>
                         </div>:null}
                     {this.state.workHistory?
                         <div className="content">
@@ -59,8 +58,8 @@ export default class About extends Component{
                             of 4 cosmetic production lines.</p>
                             <p>For the last 6 years, I worked as a Conveyancer / 
                             Legal Assistant for a small law firm in Australia.
-                            Whilst I enjoyed both occupations, I felt I needed
-                            a new challenge and programming certainly qualifies as that.</p>
+                            Whilst I enjoyed both occupations, I always feel the urge to learn more and I needed
+                            a new challenge.  Programming certainly qualifies as that.</p>
                         </div>:null}
                     {this.state.personal?
                         <div className="content">
